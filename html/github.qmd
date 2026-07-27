@@ -47,7 +47,7 @@ Configurar Git para trabajar desde RStudio. Crear un repositorio en GitHub. Cone
 
 ## Instrucciones
 
-**Git** es un sistema de control de versiones instalado en la computadora. **GitHub** es una plataforma remota donde se alojan y comparten repositorios. Cada vez que ocurre un cambio y este es declarado (commit), GitHub registra una nueva versión del proyecto (snapshot).
+**Git** es un sistema de control de versiones instalado en la computadora. **GitHub** es una plataforma remota donde se alojan y comparten repositorios. Cada vez que ocurre un cambio y este es declarado (Commit), GitHub registra una nueva versión del proyecto (snapshot).
 
 ### Proceso:
 
@@ -77,7 +77,7 @@ En esta práctica los cambios se originarán tanto en GitHub como en RStudio par
 
     ![](terminal_config.jpg)
 
-5.  Genere una clave SSH y agregue a GitHub (opcional pero altamente recomendado). Se recomienda utilizar autenticación mediante claves SSH, ya que evita introducir credenciales cada vez que se envían cambios al repositorio.
+5.  Genere una clave SSH (Tools/Global Options/Git SVN) y agréguela a GitHub (opcional pero altamente recomendado). Se recomienda utilizar autenticación mediante claves SSH, ya que evita introducir credenciales cada vez que se envían cambios al repositorio.
 
 6.  Crear repositorio en GitHub con el nombre eco_pc_2026. Siga las indicaciones del profesor.
 
@@ -89,25 +89,21 @@ En esta práctica los cambios se originarán tanto en GitHub como en RStudio par
 
     `git --version: Comprueba que Git está instalado.`
 
-    `git config --global --list`
+    `git config --global --list: información agregada en GitHub`
 
     **Configuración inicial**
 
-    `git config --global init.defaultBranch main`
+    `git config --global init.defaultBranch main #indica que el directorio o rama principal se llama main`
 
-    `git config --global core.autocrlf true`
+    `git config --global core.autocrlf true # permite realizar trabajos colaborativos entre computadoras con diferentes sistemas operativos`
 
     **Identidad**
 
-    `git config --global user.email "email"` #añadir email privado en GitHub
-
-    `git config --global user.name "username"` #añadir usuario de GitHub
+    `git config --global user.email "email"` #añadir email privado en GitHub#añadir usuario de GitHub
 
     si añadió una clave SSH ejecute la siguiente línea
 
-    `SSH -T git@github.com`
-
-    Confirme fingerprint
+    `SSH -T git@github.com #`Confirma conexión a traves de clave SSH
 
     Ejecute las línes que aparecen en GitHub
 
@@ -131,6 +127,6 @@ En esta práctica los cambios se originarán tanto en GitHub como en RStudio par
 
 □ Git conectado
 
-□ Primer commit realizado
+□ Primer Commit realizado
 
-□ Primer push exitoso
+□ Primer Push exitoso
