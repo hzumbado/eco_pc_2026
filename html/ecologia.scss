@@ -1,0 +1,193 @@
+/*-- scss:defaults --*/
+
+/* Colores principales */
+$primary: #2E7D32;
+$secondary: #81C784;
+
+$body-bg: #FFFFFF;
+$body-color: #333333;
+$link-color: #2E7D32;
+
+$headings-color: #1B5E20;
+
+/* Tipografía */
+$font-family-sans-serif: "Aptos", "Segoe UI", Arial, sans-serif;
+$headings-font-family: "Aptos Display", "Aptos", "Segoe UI", Arial, sans-serif;
+
+$font-size-base: 1rem;
+$headings-font-weight: 600;
+
+/* Código */
+$code-color: #00695C;
+$code-bg: #F3F7F3;
+
+
+/*-- scss:rules --*/
+
+/* Espaciado de los títulos */
+h1,
+h2,
+h3 {
+  margin-top: 1.4em;
+  margin-bottom: 0.7em;
+}
+
+/* Título principal */
+h1.title {
+  color: #1B5E20;
+  font-weight: 700;
+}
+
+/* Enlaces */
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Bloques de código */
+pre {
+  border-left: 4px solid #2E7D32;
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+/* Código dentro del texto */
+code {
+  border-radius: 4px;
+}
+
+/* Tablas */
+table {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+thead {
+  border-bottom: 2px solid #2E7D32;
+}
+
+/* Imágenes */
+img {
+  border-radius: 6px;
+}
+
+/* =========================================================
+   BLOQUE DE TÍTULO CON LOGOS
+   ========================================================= */
+
+#title-block-header {
+  position: relative;
+  min-height: 125px;
+  padding: 20px 125px;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #2e7d32;
+}
+
+/* Contenedor central del título */
+#title-block-header .quarto-title {
+  text-align: center;
+}
+
+/* Título */
+#title-block-header .title {
+  margin-top: 0;
+  margin-bottom: 0.35rem;
+  color: #1b5e20;
+  font-size: 2.1rem;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+/* Subtítulo */
+#title-block-header .subtitle {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+  color: #4f5b53;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+/* Autor */
+#title-block-header .quarto-title-meta {
+  justify-content: center;
+  text-align: center;
+}
+
+#title-block-header .quarto-title-meta-heading {
+  display: none;
+}
+
+#title-block-header .quarto-title-meta-contents {
+  font-size: 1rem;
+}
+
+/* Logo de la UNA: lado izquierdo */
+#title-block-header::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 105px;
+  height: 90px;
+  transform: translateY(-50%);
+  background-image: url("logo_una.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* Logo de GitHub: lado derecho */
+#title-block-header::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 90px;
+  height: 90px;
+  transform: translateY(-50%);
+  background-image: url("logo_github.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 700px) {
+  #title-block-header {
+    min-height: auto;
+    padding: 105px 10px 20px;
+  }
+
+  #title-block-header::before {
+    top: 10px;
+    left: calc(50% - 100px);
+    width: 90px;
+    height: 75px;
+    transform: none;
+  }
+
+  #title-block-header::after {
+    top: 10px;
+    right: calc(50% - 100px);
+    width: 75px;
+    height: 75px;
+    transform: none;
+  }
+
+  #title-block-header .title {
+    font-size: 1.7rem;
+  }
+}
+
+.institucion {
+  text-align: left;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+}
+
+.institucion p {
+  margin: 0;
+}
