@@ -1,5 +1,6 @@
-# Hector Zumbado
-# packages needed to run the project
+# Ecologia de poblaciones y comunidades 2026
+# Instalación de paquetes #1
+# Profesor Héctor Zumbado Ulate
 
 # setup -------------------------------------------------------------------
 
