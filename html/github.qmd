@@ -87,31 +87,33 @@ En esta práctica los cambios se originarán tanto en GitHub como en RStudio par
 
     **Verificaciones**
 
-    `git --version: Comprueba que Git está instalado.`
+    `git --version` #Comprueba que Git está instalado.
 
-    `git config --global --list: información agregada en GitHub`
+    `git config --global --list` #información agregada en GitHub
 
     **Configuración inicial**
 
-    `git config --global init.defaultBranch main #indica que el directorio o rama principal se llama main`
+    `git config --global init.defaultBranch main` #indica que el directorio o rama principal se llama main
 
-    `git config --global core.autocrlf true # permite realizar trabajos colaborativos entre computadoras con diferentes sistemas operativos`
+    `git config --global core.autocrlf true` #permite realizar trabajos colaborativos entre computadoras con diferentes sistemas operativos
 
     **Identidad**
 
-    `git config --global user.email "email"` #añadir email privado en GitHub#añadir usuario de GitHub
+    `git config --global user.email "email"` #añade email privado en GitHub
+    
+    `git config --global user.name "username"` #añade usuario de GitHub 
 
     si añadió una clave SSH ejecute la siguiente línea
 
-    `SSH -T git@github.com #`Confirma conexión a traves de clave SSH
+    `SSH -T git@github.com` #Confirma conexión a traves de clave SSH
 
     Ejecute las línes que aparecen en GitHub
 
-    `git remote add <SSH-url>`: conecta remotamente RStudio con el repositorio de GitHub
+    `git remote add <SSH-url>` #conecta remotamente RStudio con el repositorio de GitHub
 
-    `git remote -v`: Verifica la conexión remota con GitHub
+    `git remote -v` #Verifica la conexión remota con GitHub
 
-    `git push -u origin main`: Envía el proyecto por primera vez al repositorio remoto.
+    `git push -u origin main` #Envía el proyecto por primera vez al repositorio remoto.
 
 9.  Desde la interfaz web de GitHub, cree un archivo README.md con una breve descripción del proyecto.
 
