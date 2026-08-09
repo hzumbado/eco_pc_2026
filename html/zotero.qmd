@@ -1,0 +1,60 @@
+---
+title: "Tutorial Zotero"
+author: "Hector Zumbado Ulate"
+format: html
+embed-resources: true
+editor: visual
+---
+
+![](imagenes/zotero.png){fig-align="left" width="100"}
+
+
+Para obtener los datos bibliográficos de la referencia de interés, debemos siempre ingresar al sitio web de la revista y buscar la publicación a través del código doi. Una vez dentro del sitio web correspondiente se deberá buscar la opción para descargar el archivo con extensión ‘.ris’ o la palabra ‘Zotero’ . Cada revista puede tener diferentes formas para acceder a esta información (tools, cite, citation, etc.). Una forma muy sencilla de encontrar los códigos doi es realizando la búsqueda a través de Google Scholar, Web of Science, o a través de los sistemas de búsqueda de las bibliotecas universitarias.
+
+Una vez que se ha descargado el archivo con extensión ‘.ris’, este debe ser abierto a través de un doble click con el puntero. El software Zotero debe haber sido abierto previamente. En ciertas revistas el archivo se abre automáticamente en Zotero sin necesidad de abrir el archivo con extensión ‘.ris’.
+
+Si hemos instalado Zotero correctamente, una nueva ventana llamada Zotero debería aparecer en las opciones de Word. Cuando escribimos un documento en Word, la aplicación de Zotero siempre debe estar abierta para poder insertar las citas correspondientes. Es importante que en el documento que estamos escribiendo en Word, indiquemos dentro de la ventana de Zotero (Preferencias de Documento) el nombre de la revista con el estilo que queremos utilizar para la construcción de las citas y de las referencias, ya que estas presentan gran variación dependiendo la respectiva fuente. Si el nombre de la revista no aparece, se puede buscar y descargar el estilo correspondiente con el comando ‘Manage Styles’ y luego ‘Get additional Styles’.  Una vez descargado, quedará almacenado en la base de datos personal.
+
+Es muy común que las referencias descargadas de una revista contengan errores, siendo los principales:
+
+1\) Puntuación: por ejemplo, cuando cada palabra del título de una publicación comienza con mayúscula. Únicamente deberían llevar mayúscula, la primer palabra del título, los nombres propios de personas o de lugares, y algunos detalles biológicos como el género de una especies, el nombre de la familia, etc.
+
+2\) Itálica: es muy común que los nombres científicos no vengan en itálica, para reparar esto se debe agregar código HTML de la siguiente manera \<i\>especie\</i\> por ejemplo \<i\>Smilisca phaeota\</i\> se leerá *Smilisca phaeota*.
+
+3\) Errores en los nombres de los autores: Estos generalmente son más difíciles de detectar y de reparar. Estos se encuentran una vez que el programa ha construido una cita y por ejemplo aparece además del apellido del autor las iniciales del nombre.
+
+**Adicional:** Zotero permite agregar o editar información dentro de los paréntesis de la cita. Sin embargo, es importante indicarle esto al software la primera vez que se añade la bibliografía.  
+
+## Práctica
+
+Para cada uno de los siguientes doi descargue la referencia y edítela en Zotero para corregir los errores. Posteriormente abra Word y realice la cita del autor (es) de dos maneras: la primera incluyendo el apellido en la cita, y la segunda solamente el año y finalmente inserte la bibliografía. Revise la bibliografía para detectar errores y corríjalos directamente en la aplicación de Zotero. Utilizaremos el estilo provisto por la revista ***Ecosphere***
+
+1\) Cuando tenemos previamente el doi
+
+<https://doi.org/10.1146/annurev.ecolsys.36.102003.152614>
+
+2\) Buscar por título. En este caso [GoogleScholar](https://scholar.google.com/) únicamente ofrece acceso a un pdf del cual se extrae el doi
+
+Stomach contents from invasive American bullfrogs Rana catesbeiana (= Lithobates catesbeianus) on southern Vancouver Island, British Columbia, Canada
+
+3\) publicación sin doi. Utilizar Zotero Connector
+
+Population status and natural history notes on the critically endangered stream dwelling frog Craugastor ranoides (Craugastoridae) in a Costa Rican tropical dry
+
+4\) Crear bibliografía en Zotero
+
+<https://minae.go.cr/organizacion/vicegestionestrategica/SEPLASA/Informe%20cierre%20PNDIP-2024.pdf>
+
+5\) R y paquetes de R (https://ropensci.org/blog/2021/11/16/how-to-cite-r-and-r-packages/)
+
+citation()
+
+citation(‘cowplot’)
+
+Debe agregarse manualmente la versión que se utilizó
+
+6\) Citar RStudio
+
+RStudio.Version()
+
+https://support.posit.co/hc/en-us/articles/206212048-Citing-RStudio
