@@ -1,60 +1,383 @@
 ---
-title: "Tutorial Zotero"
-author: "Hector Zumbado Ulate"
-format: html
-embed-resources: true
+title: "Gestión de referencias bibliográficas con Zotero"
+subtitle: "Guía de laboratorio"
+lang: es
+
+logo-left: logo_una.png
+logo-right: zotero.png
+
+format:
+  docx:
+    toc: true
+    toc-depth: 3
+
+  html:
+    theme:
+      - flatly
+      - ecologia.scss
+    css: zotero.css
+    title-block-style: plain
+    toc: true
+    toc-depth: 3
+    toc-title: "Contenido"
+    toc-location: left
+    embed-resources: true
+    code-fold: false
+    code-overflow: wrap
+
 editor: visual
 ---
 
-![](imagenes/zotero.png){fig-align="left" width="100"}
+::: institucion
+Escuela de Ciencias Biológicas
 
+Universidad Nacional
 
-Para obtener los datos bibliográficos de la referencia de interés, debemos siempre ingresar al sitio web de la revista y buscar la publicación a través del código doi. Una vez dentro del sitio web correspondiente se deberá buscar la opción para descargar el archivo con extensión ‘.ris’ o la palabra ‘Zotero’ . Cada revista puede tener diferentes formas para acceder a esta información (tools, cite, citation, etc.). Una forma muy sencilla de encontrar los códigos doi es realizando la búsqueda a través de Google Scholar, Web of Science, o a través de los sistemas de búsqueda de las bibliotecas universitarias.
+Ecología de Poblaciones y Comunidades
 
-Una vez que se ha descargado el archivo con extensión ‘.ris’, este debe ser abierto a través de un doble click con el puntero. El software Zotero debe haber sido abierto previamente. En ciertas revistas el archivo se abre automáticamente en Zotero sin necesidad de abrir el archivo con extensión ‘.ris’.
+Profesor: Héctor Zumbado Ulate
+:::
 
-Si hemos instalado Zotero correctamente, una nueva ventana llamada Zotero debería aparecer en las opciones de Word. Cuando escribimos un documento en Word, la aplicación de Zotero siempre debe estar abierta para poder insertar las citas correspondientes. Es importante que en el documento que estamos escribiendo en Word, indiquemos dentro de la ventana de Zotero (Preferencias de Documento) el nombre de la revista con el estilo que queremos utilizar para la construcción de las citas y de las referencias, ya que estas presentan gran variación dependiendo la respectiva fuente. Si el nombre de la revista no aparece, se puede buscar y descargar el estilo correspondiente con el comando ‘Manage Styles’ y luego ‘Get additional Styles’.  Una vez descargado, quedará almacenado en la base de datos personal.
+Objetivos
 
-Es muy común que las referencias descargadas de una revista contengan errores, siendo los principales:
+- Al finalizar este tutorial, el estudiante será capaz de:
 
-1\) Puntuación: por ejemplo, cuando cada palabra del título de una publicación comienza con mayúscula. Únicamente deberían llevar mayúscula, la primer palabra del título, los nombres propios de personas o de lugares, y algunos detalles biológicos como el género de una especies, el nombre de la familia, etc.
+- Crear y organizar una biblioteca bibliográfica en Zotero.
 
-2\) Itálica: es muy común que los nombres científicos no vengan en itálica, para reparar esto se debe agregar código HTML de la siguiente manera \<i\>especie\</i\> por ejemplo \<i\>Smilisca phaeota\</i\> se leerá *Smilisca phaeota*.
+- Incorporar referencias mediante DOI, archivos RIS y Zotero Connector.
 
-3\) Errores en los nombres de los autores: Estos generalmente son más difíciles de detectar y de reparar. Estos se encuentran una vez que el programa ha construido una cita y por ejemplo aparece además del apellido del autor las iniciales del nombre.
+- Revisar y corregir los metadatos de una referencia.
 
-**Adicional:** Zotero permite agregar o editar información dentro de los paréntesis de la cita. Sin embargo, es importante indicarle esto al software la primera vez que se añade la bibliografía.  
+- Instalar y utilizar un estilo bibliográfico.
 
-## Práctica
+- Insertar citas y bibliografías automáticamente en Microsoft Word.
 
-Para cada uno de los siguientes doi descargue la referencia y edítela en Zotero para corregir los errores. Posteriormente abra Word y realice la cita del autor (es) de dos maneras: la primera incluyendo el apellido en la cita, y la segunda solamente el año y finalmente inserte la bibliografía. Revise la bibliografía para detectar errores y corríjalos directamente en la aplicación de Zotero. Utilizaremos el estilo provisto por la revista ***Ecosphere***
+- Incorporar referencias que no corresponden a artículos científicos, como reportes, páginas web y software.
 
-1\) Cuando tenemos previamente el doi
+- Citar R, RStudio y paquetes de R.
 
-<https://doi.org/10.1146/annurev.ecolsys.36.102003.152614>
+## Parte I. Preparación de Zotero
 
-2\) Buscar por título. En este caso [GoogleScholar](https://scholar.google.com/) únicamente ofrece acceso a un pdf del cual se extrae el doi
+### Paso 1. Crear una colección
 
-Stomach contents from invasive American bullfrogs Rana catesbeiana (= Lithobates catesbeianus) on southern Vancouver Island, British Columbia, Canada
+1.   Abra **Zotero**.
 
-3\) publicación sin doi. Utilizar Zotero Connector
+2.   En el panel izquierdo, seleccione **Nueva colección**.
 
-Population status and natural history notes on the critically endangered stream dwelling frog Craugastor ranoides (Craugastoridae) in a Costa Rican tropical dry
+3.   Escriba: **tutorial_zotero**
 
-4\) Crear bibliografía en Zotero
+4.   Seleccione la colección.
 
-<https://minae.go.cr/organizacion/vicegestionestrategica/SEPLASA/Informe%20cierre%20PNDIP-2024.pdf>
+>  **Compruebe:** la colección `tutorial_zotero` debe aparecer en el panel izquierdo de Zotero.
 
-5\) R y paquetes de R (https://ropensci.org/blog/2021/11/16/how-to-cite-r-and-r-packages/)
+### Paso 2. Comprobar la integración con Microsoft Word
 
+1.   Mantenga Zotero abierto.
+
+2.   Abra **Microsoft Word**.
+
+3.   Observe las pestañas de la cinta superior.
+
+4.   Busque la pestaña **Zotero**.
+
+5.   Ábrala. Deberían aparecer herramientas como **Add/Edit Citation**, **Add/Edit Bibliography**, **Document Preferences** y **Refresh**.
+
+>  **Importante:** Zotero debe permanecer abierto mientras trabajamos con las citas en Word.
+
+## Parte II. Incorporar referencias a Zotero
+
+Existen varias formas de incorporar una referencia. En este tutorial aprenderemos **tres métodos**.
+
+### Método 1. Agregar una referencia mediante DOI
+
+Utilizaremos: **https://doi.org/10.1146/annurev.ecolsys.36.102003.152614**
+
+1.   Copie el DOI.
+
+2.   Abra Zotero.
+
+3.   Seleccione la colección `tutorial_zotero`.
+
+4.   En la barra superior, seleccione el botón **Add Item(s) by Identifier** (icono de varita mágica).
+
+5.   Pegue el DOI.
+
+6.   Presione **Enter**.
+
+    Zotero buscará automáticamente los metadatos y agregará la publicación.
+
+Seleccione la referencia recién incorporada y revise en el panel derecho:
+
+**Título → Autores → Año → Revista → Volumen → Número → Páginas → DOI**
+
+> **Regla fundamental:** que Zotero haya encontrado una referencia **no significa que sus metadatos sean correctos**.
+
+### Método 2. Importar un archivo RIS
+
+Algunas bases de datos y revistas permiten descargar la información bibliográfica mediante un archivo con extensión `.ris`.
+
+Las opciones pueden llamarse:
+
+**Cite**, **Citation**, **Export**, **Export citation**, **RIS** o **Reference manager**.
+
+Después de descargarlo:
+
+1.  Localice el archivo `.ris`.
+
+2.   Ábralo con Zotero.
+
+3.   Seleccione la colección donde desea guardar la referencia.
+
+4.   Compruebe que la referencia fue importada correctamente.
+
+>  El nombre de la opción cambia entre revistas y bases de datos. Lo importante es reconocer **RIS** como un formato para intercambiar información bibliográfica.
+
+Haga la descarga del archivo .ris y la respectiva revisión bibliográfica del artículo <https://onlinelibrary.wiley.com/doi/full/10.1111/eva.12940>
+
+### Método 3. Zotero Connector
+
+Zotero Connector permite capturar referencias directamente desde el navegador.
+
+Utilizaremos: **Population status and natural history notes on the critically endangered stream dwelling frog *Craugastor ranoides* (Craugastoridae) in a Costa Rican tropical dry forest.**
+
+1.   Busque el título en el navegador.
+
+2.   Abra la página donde se encuentra el documento.
+
+3.   Observe el icono de **Zotero Connector** en el navegador.
+
+4.   Haga clic sobre él.
+
+5.   Seleccione `tutorial_zotero` como colección.
+
+6.   Abra Zotero y compruebe que la referencia fue incorporada.
+
+>  **No todas las publicaciones tienen DOI.** Zotero puede gestionar perfectamente referencias sin DOI.
+
+## Parte III. Revisar y corregir referencias
+
+Este es uno de los pasos **más importantes de todo el tutorial**. Nunca debemos asumir que los metadatos descargados son correctos.
+
+### 1. Título
+
+Revise el uso de mayúsculas y minúsculas según corresponda al tipo de publicación y al estilo bibliográfico.
+
+### 2. Nombres científicos
+
+Los nombres científicos deben conservar la cursiva correspondiente.
+
+Por ejemplo: *Smilisca phaeota*
+
+Cuando sea necesario conservar formato dentro de determinados campos de Zotero, puede utilizarse marcado HTML compatible, por ejemplo:
+
+`<i>Smilisca phaeota</i>`
+
+### 3. Autores
+
+Compruebe que:
+
+**Apellido** y **nombre** estén almacenados correctamente en campos separados.
+
+Un autor mal ingresado puede producir citas incorrectas.
+
+### 4. Tipo de documento
+
+Compruebe que Zotero haya identificado correctamente si se trata de:
+
+**Journal Article**, **Book**, **Book Section**, **Report**, **Web Page**, etc.
+
+>  **No corrija los errores directamente en la bibliografía de Word. Corrija la referencia original en Zotero y después actualice el documento.**
+
+## Parte IV. Elegir un estilo bibliográfico
+
+### Paso 3. Instalar el estilo de Ecosphere
+
+1.   Abra Microsoft Word.
+
+2.   Seleccione la pestaña **Zotero**.
+
+3.   Seleccione **Document Preferences**.
+
+4.   Busque **Ecosphere**.
+
+5.   Si el estilo no está disponible, abra el administrador de estilos de Zotero y seleccione **Get additional styles**.
+
+6.   Busque **Ecosphere**.
+
+7.   Instálelo.
+
+8.   Regrese a Word y selecciónelo.
+
+Ahora todas las citas y la bibliografía utilizarán automáticamente ese estilo.
+
+## Parte V. Insertar citas en Word
+
+Escriba una oración de prueba, por ejemplo:
+
+La dinámica de las poblaciones puede estar determinada por múltiples procesos ecológicos.
+
+Coloque el cursor al final de la oración.
+
+1.   Abra **Zotero** en Word.
+
+2.   Seleccione **Add/Edit Citation**.
+
+3.   Busque la referencia.
+
+4.   Selecciónela.
+
+5.   Presione **Enter**.
+
+Obtendrá una **cita parentética**.
+
+**Cita narrativa**
+
+Escriba manualmente el apellido del autor como parte de la oración. Luego inserte la cita con **Add/Edit Citation** y utilice la opción **Omit Author** para que Zotero muestre únicamente el año entre paréntesis.
+
+Por ejemplo:
+
+**Smith et al. (2005) propusieron que...**
+
+## Parte VI. Crear automáticamente la bibliografía
+
+1.   Coloque el cursor al final del documento.
+
+2.   Escriba el encabezado **Referencias**.
+
+3.   Presione Enter.
+
+4.   Seleccione **Zotero → Add/Edit Bibliography**.
+
+Zotero construirá automáticamente la bibliografía utilizando únicamente las referencias citadas.
+
+Ahora revise cuidadosamente el resultado.
+
+Si encuentra un error:
+
+**Zotero → corregir metadatos → Word → Refresh**
+
+No lo corrija manualmente en la bibliografía.
+
+## Parte VII. Referencias que no son artículos científicos
+
+### Reportes y documentos institucionales
+
+Zotero la reconoce como **Report**.
+
+Localice la **Guía de Planes Generales de Manejo de ASP del SINAC**.
+
+Utilice Zotero Connector y posteriormente revise cuidadosamente:
+
+**autor institucional, título, año, institución y URL.**
+
+**Actividad guiada:** cree la referencia en Zotero siguiendo las indicaciones del profesor.
+
+## Parte VIII. Citar R y los paquetes utilizados
+
+En R ejecute:
+
+```         
 citation()
+```
 
-citation(‘cowplot’)
+Observe la información que R proporciona para citar el software.
 
-Debe agregarse manualmente la versión que se utilizó
+Después ejecute:
 
-6\) Citar RStudio
+```         
+citation("cowplot")
+```
 
+Compare ambos resultados.
+
+Finalmente:
+
+```         
+citation("sf")
+```
+
+Observe que un paquete puede solicitar **más de una referencia**.
+
+**Actividad guiada:** cree la referencia en Zotero siguiendo las indicaciones del profesor.
+
+>  **Principio importante:** utilizar un paquete de R también implica reconocer y citar el trabajo de quienes lo desarrollaron.
+
+# Parte IX. Citar RStudio
+
+Ejecute:
+
+```         
 RStudio.Version()
+```
 
-https://support.posit.co/hc/en-us/articles/206212048-Citing-RStudio
+Identifique la versión instalada de RStudio. A continuación, construya la referencia bibliográfica siguiendo las indicaciones del profesor.
+
+## Práctica: construyendo referencias con Zotero
+
+**Modalidad:** individual o en parejas.
+
+**Estilo bibliográfico:** Conservation Biology.
+
+### Ejercicio 1. Referencias mediante DOI
+
+Incorpore y revise las referencias correspondientes a:
+
+`https://doi.org/10.1093/oxfordjournals.aje.a121467`
+
+`https://doi.org/10.1016/j.jep.2008.07.026`
+
+Para cada publicación:
+
+1.   Incorpore la referencia a Zotero.
+
+2.   Revise y corrija sus metadatos.
+
+3.   Realice una cita parentética.
+
+4.   Realice una cita narrativa.
+
+### Ejercicio 2. Encontrar un DOI
+
+Título: Global Rates of Habitat Loss and Implications for Amphibian Conservation.
+
+La persona estudiante deberá:
+
+**buscar título en Google Scholar → localizar publicación → identificar DOI → importar referencia → verificar metadatos.**
+
+### Ejercicio 3. Reporte técnico
+
+Utilice:
+
+`https://doi.org/10.3133/ofr20091102`
+
+Identifique correctamente el tipo de documento y construya su referencia bibliográfica.
+
+### Ejercicio 4. Paquete `sf`
+
+Ejecute:
+
+```         
+citation("sf")
+```
+
+Identifique **las dos referencias solicitadas por el paquete**, incorpórelas a Zotero y compruebe sus metadatos.
+
+### Ejercicio 5. Bibliografía final
+
+En Word deberá entregar:
+
+-  Dos ejemplos de **citas narrativas**.
+
+-  Dos ejemplos de **citas parentéticas**.
+
+-  Una referencia correspondiente a un **reporte**.
+
+-  Las referencias necesarias para citar **`sf`**.
+
+-  Una **bibliografía automática** generada con Zotero en estilo *Conservation Biology*.
+
+Antes de entregar, utilice Refresh y compruebe que todas las citas coincidan con la bibliografía.
+
+### Siguiente paso
+
+En la siguiente actividad aprenderemos a transformar los resultados de esta práctica en una **página reproducible con Quarto** y publicarla en nuestro **portafolio científico mediante GitHub**.
