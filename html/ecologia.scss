@@ -191,3 +191,8 @@ img {
 .institucion p {
   margin: 0;
 }
+
+/* Logo alternativo de Zotero */
+body.logo-zotero #title-block-header::after {
+  background-image: url("zotero.png");
+}
