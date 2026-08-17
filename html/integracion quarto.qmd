@@ -1,0 +1,340 @@
+---
+title: "Creación e integración de páginas Quarto en el portafolio científico"
+subtitle: "Guía de laboratorio"
+lang: es
+
+logo-left: logo_una.png
+logo-right: logo_github.png
+
+format:
+  docx:
+    toc: true
+    toc-depth: 3
+
+  html:
+    theme:
+      - flatly
+      - ecologia.scss
+    title-block-style: plain
+    toc: true
+    toc-depth: 3
+    toc-title: "Contenido"
+    toc-location: left
+    embed-resources: true
+    code-fold: false
+    code-overflow: wrap
+
+editor: visual
+---
+
+::: institucion
+Escuela de Ciencias Biológicas
+
+Universidad Nacional
+
+Ecología de Poblaciones y Comunidades
+
+Profesor: Héctor Zumbado Ulate
+:::
+
+## Objetivos
+
+Al finalizar esta práctica, la persona estudiante será capaz de:
+
+- Crear una plantilla básica de Quarto para documentar las prácticas del curso.
+- Crear nuevas páginas a partir de la plantilla sin modificar el archivo original.
+- Utilizar **Visual Mode** para editar documentos Quarto.
+- Incorporar texto, figuras y cuadros.
+- Incorporar referencias bibliográficas generadas desde Zotero.
+- Renderizar una página Quarto.
+- Integrar una nueva página al portafolio científico.
+- Publicar los cambios mediante Git y GitHub Pages.
+
+# Parte I. Crear la plantilla de las prácticas
+
+## Paso 1. Abrir el proyecto del portafolio
+
+1.  Abra **RStudio**.
+2.  Abra el proyecto de R correspondiente a su sitio web o portafolio científico.
+3.  En el panel **Files**, compruebe que aparecen los archivos principales del sitio, por ejemplo:
+
+- `_quarto.yml`
+- `index.qmd`
+- `about.qmd`
+- `portfolio.qmd` o `portafolio.qmd`
+- carpeta `images`
+
+> **Importante:** la plantilla debe crearse dentro del proyecto del sitio web. No cree un proyecto nuevo.
+
+## Paso 2. Crear un nuevo documento Quarto
+
+En RStudio seleccione:
+
+**File → New File → Quarto Document**
+
+En la ventana que aparece:
+
+1.  Seleccione **Document**.
+2.  En **Title**, escriba:
+
+`Título de la práctica`
+
+3.  En **Author**, escriba su nombre.
+4.  Seleccione **HTML**.
+5.  Seleccione **Visual** como editor, si aparece esta opción.
+6.  Presione **Create**.
+
+## Paso 3. Guardar el archivo como plantilla
+
+Seleccione:
+
+**File → Save As**
+
+Guarde el archivo con el nombre:
+
+`plantilla.qmd`
+
+El archivo debe quedar dentro de la carpeta principal del proyecto del sitio web.
+
+> Utilice nombres de archivos sencillos, sin espacios, tildes ni caracteres especiales.
+
+## Paso 4. Trabajar en Visual Mode
+
+Compruebe que se encuentra trabajando en **Visual Mode**.
+
+Si fuera necesario, seleccione **Visual** en la parte superior del editor.
+
+Visual Mode permite editar el documento de manera similar a Microsoft Word.
+
+Durante este curso utilizaremos principalmente este modo. **No es necesario aprender HTML para elaborar las páginas del portafolio.**
+
+## Paso 5. Construir la estructura de la plantilla
+
+Debajo del título del documento agregue las siguientes secciones utilizando **Heading 2**.
+
+## Introducción
+
+Breve descripción del tema de la práctica y su importancia.
+
+## Objetivo
+
+Indique el objetivo principal de la práctica.
+
+## Metodología
+
+Describa brevemente las actividades realizadas y los métodos utilizados.
+
+No es necesario incluir todos los códigos de R utilizados durante el laboratorio.
+
+## Resultados
+
+Presente los principales resultados obtenidos durante la práctica.
+
+Esta sección puede incluir:
+
+- texto;
+- figuras;
+- fotografías;
+- gráficos;
+- mapas;
+- cuadros.
+
+## Interpretación
+
+Explique qué significan los resultados obtenidos.
+
+Considere preguntas como:
+
+- ¿Cuál fue el patrón más importante?
+- ¿Qué indican las figuras o cuadros?
+- ¿Cómo se relacionan los resultados con el objetivo de la práctica?
+
+## Conclusiones
+
+Resuma brevemente las principales conclusiones o aprendizajes de la práctica.
+
+## Referencias
+
+Incluya las fuentes utilizadas durante la práctica.
+
+## Paso 6. Guardar la plantilla
+
+Guarde los cambios:
+
+**Ctrl + S**
+
+Al finalizar debe existir el archivo:
+
+`plantilla.qmd`
+
+> **Importante:** `plantilla.qmd` será nuestro archivo original. De ahora en adelante no escribiremos directamente sobre esta plantilla. Para cada nueva práctica crearemos una copia.
+
+# Parte II. Crear una práctica a partir de la plantilla
+
+Ahora utilizaremos `plantilla.qmd` para crear la página correspondiente a la práctica de Zotero realizada la semana anterior.
+
+1. Abra `plantilla.qmd`.
+2. Seleccione **File → Save As**.
+3. Guarde la copia con el nombre:
+
+   `zotero.qmd`
+
+4. Compruebe que está trabajando en **Visual Mode**.
+5. Cambie el título por:
+
+   **Gestión de referencias bibliográficas con Zotero**
+
+6. Complete brevemente las secciones de la plantilla utilizando el trabajo realizado durante la práctica anterior.
+
+> **Importante:** no modifique `plantilla.qmd`. Esta se conservará para crear las próximas prácticas.
+
+## Insertar figuras
+
+Vamos a incorporar una figura sencilla para practicar la inserción de imágenes en Quarto.
+
+1. Abra **Zotero** y seleccione la colección creada durante la práctica anterior.
+2. Tome una captura de pantalla donde se observe la colección y algunas de las referencias incorporadas.
+3. Guarde la imagen dentro de la carpeta `images` del proyecto del sitio web con el nombre:
+
+   `zotero_biblioteca.png`
+
+4. Regrese a `zotero.qmd` y coloque el cursor en la sección **Resultados**.
+5. En **Visual Mode**, seleccione **Insert → Figure**.
+6. Seleccione `zotero_biblioteca.png`.
+7. Agregue como pie de figura:
+
+   **Ejemplo de una colección de referencias bibliográficas organizada en Zotero.**
+
+Compruebe que la figura aparece correctamente en el documento.
+
+## Insertar cuadros
+
+En la sección **Resultados**, debajo de la figura, inserte un cuadro para resumir las formas de incorporar referencias utilizadas durante la práctica.
+
+1. En **Visual Mode**, seleccione **Insert → Table**.
+2. Cree un cuadro de **2 columnas y 5 filas**.
+3. Complete el cuadro de la siguiente manera:
+
+| Método | ¿Cuándo utilizarlo? |
+|---|---|
+| DOI | Cuando la publicación tiene un DOI conocido |
+| Archivo RIS | Cuando la revista o base de datos permite exportar la referencia |
+| Zotero Connector | Para capturar referencias directamente desde el navegador |
+| Entrada manual | Cuando la información no puede importarse automáticamente |
+
+4. Agregue como título:
+
+   **Métodos utilizados para incorporar referencias bibliográficas a Zotero.**
+
+> **Importante:** en las próximas prácticas no siempre será obligatorio incluir siempre una figura y un cuadro. Utilice estos elementos cuando sean útiles para presentar y comunicar sus resultados.
+
+# Parte III. Incorporar las referencias de Zotero
+
+Ahora utilizaremos las referencias trabajadas durante la práctica anterior para insertar citas en `zotero.qmd`.
+
+## Exportar las referencias
+
+1. Abra **Zotero**.
+2. Seleccione la colección utilizada durante la práctica.
+3. Haga clic derecho sobre la colección y seleccione **Export Collection**.
+4. Seleccione el formato **BibTeX**.
+5. Guarde el archivo **dentro del proyecto del sitio web** con el nombre:
+
+   `referencias.bib`
+
+6. Regrese a RStudio y compruebe en el panel **Files** que aparece el archivo:
+
+   `referencias.bib`
+
+> **No continúe hasta comprobar que `referencias.bib` aparece en el panel Files.**
+
+## Conectar las referencias con `zotero.qmd`
+
+Una vez que `referencias.bib` existe dentro del proyecto:
+
+1. Abra `zotero.qmd`.
+2. Cambie momentáneamente de **Visual** a **Source**.
+3. Localice el encabezado YAML que aparece al inicio del documento.
+4. Agregue la siguiente línea antes de `format`:
+
+```yaml
+bibliography: referencias.bib
+```
+
+Por ejemplo, el encabezado puede quedar así:
+
+```yaml
+---
+title: "Gestión de referencias bibliográficas con Zotero"
+author: "Nombre del estudiante"
+bibliography: referencias.bib
+format: html
+editor: visual
+---
+```
+
+5. Guarde el archivo.
+6. Regrese a **Visual Mode**.
+
+> Esta modificación se realiza en `zotero.qmd`, **no en `plantilla.qmd`**.
+
+## Insertar una cita
+
+1. Coloque el cursor en el texto donde desea insertar una referencia.
+2. En **Visual Mode**, seleccione **Insert → Citation**.
+3. Busque la referencia correspondiente.
+4. Selecciónela e inserte la cita.
+
+Inserte al menos una referencia utilizada durante la práctica.
+
+Presione **Render** y compruebe que la cita y la bibliografía aparecen correctamente.
+
+# Parte IV. Integrar la práctica al portafolio
+
+Ahora conectaremos `zotero.qmd` con el cajón que ya existe en el sitio web.
+
+1. Abra `portafolio.qmd`.
+2. Localice el cajón:
+
+   **Gestión de referencias bibliográficas con Zotero**
+
+3. Elimine el texto **Disponible próximamente**.
+4. Agregue una descripción breve de la práctica.
+5. Escriba:
+
+   **Ver práctica →**
+
+6. Seleccione **Ver práctica →** y utilice la herramienta para insertar un enlace.
+7. Enlace el texto con:
+
+   `zotero.qmd`
+
+8. Elimine el cajón **Próximas prácticas**, ya que a partir de ahora las prácticas reales se irán incorporando al portafolio.
+
+# Parte V. Actualizar y publicar el sitio
+
+1. Guarde todos los cambios.
+2. Seleccione **Render Website**.
+3. Compruebe que el cajón de Zotero aparece correctamente.
+4. Compruebe que **Ver práctica →** abre `zotero.qmd`.
+
+Si todo funciona:
+
+1. Abra la pestaña **Git** de RStudio.
+2. Marque los archivos nuevos o modificados.
+3. Seleccione **Commit**.
+4. Utilice un mensaje como:
+
+   `Agregar práctica de Zotero`
+
+5. Presione **Commit**.
+6. Presione **Push**.
+7. Abra el sitio web publicado y compruebe que la práctica funciona correctamente.
+
+# Para las próximas prácticas
+
+De ahora en adelante utilizaremos siempre el mismo procedimiento:
+
+**`plantilla.qmd` → Save As → completar práctica → Render → agregar al portafolio → Render Website → Commit → Push**
+
+El proyecto de R del curso se utilizará para trabajar con **datos, códigos y análisis**. El portafolio científico se utilizará para presentar y comunicar los **métodos, resultados, figuras, cuadros, interpretaciones y conclusiones** más importantes.
