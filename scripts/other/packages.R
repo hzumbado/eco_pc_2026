@@ -24,6 +24,8 @@ packages <-
     'tmap',
     'sf',
     'terra',
+    'gt',
+    'lobstr',
     'remotes',
     'devtools',
     'usethis',
